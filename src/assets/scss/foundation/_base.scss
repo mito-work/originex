@@ -1,0 +1,88 @@
+@use "settings.scss";
+@use "mixins.scss";
+body {
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "メイリオ", Meiryo, sans-serif;
+
+  color: var(--main-color);
+  background-color: var(--white);
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  height: auto;
+}
+h2,
+h3,
+h4,
+p,
+a {
+  font-weight: 700;
+  font-size: calc(14px / 16px) * 1rem;
+  font-feature-settings: "pkna";
+  line-height: 2;
+}
+small {
+  font-size: calc(10px / 16px) * 1rem;
+}
+.font-small {
+  font-size: calc(12px / 16px) * 1rem;
+}
+.originex.--back-gray {
+  background-color: var(--back-color-lignt-gray);
+}
+.originex__item.--back-color-darkn {
+  background-color: var(--back-color-black);
+}
+.originex__item.--back-black {
+  background-color: var(--main-color);
+}
+.originex__item.--back-white {
+  background-color: var(--white);
+}
+.--back-black {
+  background-color: var(--main-color);
+}
+.back-color-gray {
+  background-color: var(--back-color-gray);
+}
+
+.--white {
+  color: var(--white);
+}
+.--before {
+  @include mixins.media__lg {
+    position: relative;
+    z-index: 1;
+  }
+}
+.originex__item.--before-back {
+  @include mixins.media__lg {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 40%;
+      height: auto;
+      background-color: var(--main-color);
+      z-index: -1;
+    }
+  }
+}
+.originex__item.--after-back {
+  @include mixins.media__lg {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      height: auto;
+      background-color: var(--back-color-gray);
+      z-index: -1;
+    }
+  }
+}

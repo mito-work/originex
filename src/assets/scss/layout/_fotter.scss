@@ -1,0 +1,47 @@
+@use "../foundation/settings";
+@use "../foundation/mixins";
+.l-footer {
+  color: var(--white);
+  &__bottom {
+    background-color: var(--back-color-darkn);
+    padding: calc(135px / 16px) * 1rem 0 calc(64px / 16px) * 1rem 0;
+    @include mixins.media__lg {
+      padding-top: 40.3125rem;
+    }
+    margin-top: -1rem * calc(100px / 16px);
+    @include mixins.media__lg {
+      margin-top: -1rem * calc(590px / 16px);
+    }
+  }
+  &__end {
+    @include mixins.media__lg {
+      align-items: flex-end;
+    }
+  }
+  &__primary {
+    font-size: calc(24px / 16px) * 1rem;
+  }
+  &__sns {
+    @include mixins.media__lg {
+      align-items: center;
+      justify-content: flex-end;
+    }
+    dt {
+      font-weight: 700;
+      padding-top: calc(62px / 16px) * 1rem;
+      @include mixins.media__lg {
+        padding-top: 0;
+      }
+    }
+    ul {
+      @include mixins.media__lg {
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@use "../../foundation/settings";
+@use "../../foundation/mixins";
+.c-btn {
+  position: relative;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 50px;
+  color: var(--white);
+  font-size: 1rem;
+  transition: 0.5s;
+}
+.c-btn.--top {
+  border: 2px solid var(--white);
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem;
+  &:hover {
+    color: var(--main-color);
+    background-color: var(--white);
+  }
+  @include mixins.media__lg {
+    padding: 0.5rem 1rem;
+  }
+  background-color: transparent;
+  margin: 5rem;
+  @include mixins.media__lg {
+    margin: 0;
+  }
+}
+.c-btn.--primary {
+  background-color: var(--main-color);
+  padding: 1rem 2rem;
+  &:hover {
+    background-color: transparent;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+  }
+}
+.c-btn.--primaryline {
+  background-color: inherit;
+  border: 2px solid var(--white);
+  padding: 1rem 2rem;
+  &:hover {
+    background-color: var(--white);
+    color: var(--main-color);
+  }
+}
+
+.--hamburger {
+  @include mixins.media__lg {
+    display: none;
+  }
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 6.25vw;
+  left: auto;
+  border-radius: 0;
+  z-index: 1;
+  margin: auto 0;
+  width: 34px;
+  height: 34px;
+  background-color: transparent;
+  border: 2px solid var(--white);
+  mix-blend-mode: difference;
+  &__line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    margin: auto;
+    width: 18px;
+    height: 2px;
+    background-color: var(--white);
+    mix-blend-mode: difference;
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: inherit;
+      content: "";
+    }
+    &::before {
+      top: -3px;
+    }
+    &::after {
+      top: 3px;
+    }
+  }
+}
+
+/* ハンバーガーメニュー開閉*/
+.is-drawerActive {
+  .--hamburger {
+    border-color: var(--white);
+    &__line {
+      background-color: transparent;
+      &::before,
+      &::after {
+        top: 0;
+        background-color: var(--white);
+      }
+      &::before {
+        transform: rotate(-45deg);
+      }
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

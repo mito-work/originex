@@ -1,0 +1,74 @@
+//Breakpoints
+$breakpoints: (
+  xxs: 0,
+  xs: 360px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+
+$xxs: 0;
+$xs: 360px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+// @each $device, $breakpoint in $breakpoints {
+//   @mixin media__#{$breakpoint} {
+//   @mixin mediPc {
+//     @media screen and (min-width: $breakpoint) {
+//       @content;
+//     }
+//   }
+// }
+@mixin media__xxs {
+  @media screen and (min-width: $xxs) {
+    @content;
+  }
+}
+@mixin media__xs {
+  @media screen and (min-width: $xs) {
+    @content;
+  }
+}
+@mixin media__sm {
+  @media screen and (min-width: $sm) {
+    @content;
+  }
+}
+@mixin media__md {
+  @media screen and (min-width: $md) {
+    @content;
+  }
+}
+@mixin media__lg {
+  @media screen and (min-width: $lg) {
+    @content;
+  }
+}
+@mixin media__xl {
+  @media screen and (min-width: $xl) {
+    @content;
+  }
+}
+@mixin media__xxl {
+  @media screen and (min-width: $xxl) {
+    @content;
+  }
+}
+//$mediaTab: 768;
+// @mixin mediaPcMini {
+//   @media screen and (min-width: $mediaPC+"px") {
+//     @content;
+//   }
+// }
+
+// @mixin mediaTabMini {
+//   @media screen and (min-width: $mediaTab+"px") {
+//     @content;
+//   }
+// }

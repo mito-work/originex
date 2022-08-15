@@ -1,0 +1,29 @@
+@use "../../foundation/settings";
+@use "../../foundation/mixins";
+.p-hero {
+  &__heading {
+    font-weight: 700;
+    font-size: calc(100 / 375px) * 44px * 1vw;
+    line-height: 1.25;
+    @include mixins.media__lg {
+      font-size: calc(100 / 1366px) * 80px * 1vw;
+    }
+  }
+  &__body {
+    padding: 8rem 0 6.75vw 0;
+  }
+  &__wrapper {
+    padding: 4rem 6.25vw;
+    background-color: var(--main-color);
+    @include mixins.media__lg {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100vh;
+    }
+  }
+  &-img {
+    width: 100%;
+    filter: grayscale(100%);
+  }
+}

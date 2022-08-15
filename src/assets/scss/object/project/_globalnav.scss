@@ -1,0 +1,68 @@
+@use "../../foundation/settings";
+@use "../../foundation/mixins";
+body {
+  &:before {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    content: "";
+    opacity: 0;
+  }
+}
+body.is-drawerActive {
+  overflow: hidden;
+  &:before {
+    visibility: visible;
+    opacity: 1;
+  }
+  .p-drawer {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.p-drawer {
+  @include mixins.media__lg {
+    position: static;
+  }
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @include mixins.media__lg {
+    width: auto;
+  }
+  width: 100vw;
+  opacity: 0;
+  visibility: hidden;
+  @include mixins.media__lg {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.p-gloval-nav {
+  padding: 18vh 0 0 6.4vw;
+  @include mixins.media__lg {
+    padding: 0 0 0 0;
+  }
+  a {
+    font-size: 2rem;
+    color: var(--white);
+    @include mixins.media__lg {
+      font-size: 1rem;
+    }
+  }
+  > ul.originex {
+    @include mixins.media__lg {
+      align-items: center;
+    }
+  }
+}

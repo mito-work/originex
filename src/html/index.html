@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olex.css</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700%7CRoboto:400,500,700&amp;subset=japanese"
+    />
+    <script src="//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/gsap.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <header class="l-header p-header">
+      <div class="l-container">
+        <div class="originex" data-align="justify middle">
+          <h1 class="originex__item js-anime">
+            <span class="u-visibility-hidden">Olex.css</span>
+            <a class="p-logo" href="index.html">Olex.css</a>
+          </h1>
+          <nav class="originex__item">
+            <button type="button" class="js-drawer c-btn --hamburger" aria-controls="global-nav" aria-expanded="false">
+              <span class="--hamburger__line">
+                <span class="u-visibility-hidden">メニューを開閉する</span>
+              </span>
+            </button>
+            <div class="p-drawer">
+              <h2 class="u-visibility-hidden">サイト内メニュー</h2>
+              <div class="p-gloval-nav" id="gloval-nav">
+                <ul class="originex" data-gutter="normal" data-align="end">
+                  <li class="originex__item" data-grid="xxs12 lgAuto"><a href="#overview">Overview</a></li>
+                  <li class="originex__item" data-grid="xxs12 lgAuto"><a href="#grid">Grid</a></li>
+                  <li class="originex__item" data-grid="xxs12 lgAuto"><a href="#alignment">Alignment</a></li>
+                  <li class="originex__item" data-grid="xxs12 lgAuto"><a href="#direction">Direction</a></li>
+                  <li class="originex__item" data-grid="xxs12 lgAuto">
+                    <a href="howtomake" class="c-btn --top">How to Make</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="l-main">
+      <div class="originex">
+        <div class="originex__item" data-grid="xxs12 lg6">
+          <div class="p-hero__body">
+            <div class="l-container">
+              <h2 class="p-hero__heading">
+                <span class="u-br js-trigger">Ore no</span>
+                <span class="u-br">Flexible CSS</span>
+                <span class="u-br">Grid System.</span>
+              </h2>
+              <p class="u-mt-medium u-main-txt js-anime">
+                <span class="u-br">俺流のフレキシブルCSSグリッドシステム</span>
+                <span class="u-br">「Olex」のデモページ。</span>
+                <span class="u-br">「Olex」はFlexboxを利用した</span>
+                <span class="u-br">単なるグリッドシステムなので、</span>
+                <span class="u-br">気になった方は、解説ページを参考に自分で作ってもらえたらと思います。</span>
+              </p>
+              <p class="u-mt-large u-inline-center js-anime"><a class="c-btn --primary" href="#">How to Make</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="originex__item" data-grid="xxs12 lg6">
+          <div class="p-hero__wrapper">
+            <div class="originex">
+              <figure class="originex__item" data-grid="xxs4">
+                <img
+                  class="p-hero-img"
+                  src="../assets/img/hero-right.jpg"
+                  srcset="../assets/img/hero-right.jpg, ../assets/img/hero-right@2.jpg 2x"
+                  alt=""
+                  decoding="async"
+                />
+              </figure>
+              <figure class="originex__item" data-grid="xxs4">
+                <img
+                  class="p-hero-img"
+                  src="../assets/img/hero-center.jpg"
+                  srcset="../assets/img/hero-center.jpg, ../assets/img/hero-center@2.jpg 2x"
+                  alt=""
+                  decoding="async"
+                />
+              </figure>
+              <figure class="originex__item" data-grid="xxs4">
+                <img
+                  class="p-hero-img"
+                  src="../assets/img/hero-left.jpg"
+                  srcset="../assets/img/hero-left.jpg, ../assets/img/hero-left@2.jpg 2x"
+                  alt=""
+                  decoding="async"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /hero -->
+      <section id="overview">
+        <div class="l-container">
+          <div class="p-heading p-heading__primary u-inline-center js-anime">
+            <h2 class="--primary">Overview</h2>
+            <p>
+              <span class="u-br">12カラムを基準として</span>
+              <span class="u-br">必要なカラム数を指定するグリッドシステム。</span><br />
+              <span class="u-br">間隔を開けるも閉じるも、その大きさも選択できる。 </span><br />
+              <span class="u-br">位置揃えや順番の入れ替えも可能。</span>
+            </p>
+          </div>
+        </div>
+        <div class="originex --back-gray u-pb-medium --before">
+          <div class="originex__item --back-black --before-back" data-grid="xxs12 lg4">
+            <div class="p-heading p-heading__secondary js-anime">
+              <h3 class="--secondary --white">Feature</h3>
+              <p class="--white">
+                Flexboxを利用したグリッドシステムで、単なる横並びや12カラムをベースとしたグリッドレイアウトも可能です。グリッド間のスペースにはborderを利用していて間隔の調整が容易にできます。もちろんこのページのレイアウトは「Olex.css」を使っているので、詳しくはデベロッパーツールで。
+              </p>
+            </div>
+          </div>
+          <div class="originex__item u_space-evenly" data-grid="xxs12 lg8">
+            <ul class="originex" data-align="center" data-gutter="small">
+              <li class="originex__item p-heading u-inline-center p-card --back-white" data-grid="xxs10 lg4">
+                <h4 class="--third p-card__grid">Grid</h4>
+                <p class="u-mt-medium font-small">12カラムを基準とした グリッドシステム。</p>
+              </li>
+              <li class="originex__item p-heading u-inline-center p-card --back-white" data-grid="xxs10 lg4">
+                <h4 class="--third p-card__align">Alignment</h4>
+                <p class="u-mt-medium font-small">各アイテムの位置を揃える こともできる。</p>
+              </li>
+              <li class="originex__item p-heading u-inline-center p-card --back-white" data-grid="xxs10 lg4">
+                <h4 class="--third p-card__direction">Direction</h4>
+                <p class="u-mt-medium font-small">
+                  <span class="u-br">アイテムの並び順を</span><span class="u-br">逆順に変更できる。</span>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- /overview -->
+      <section id="grid">
+        <div class="l-container">
+          <div class="p-heading p-heading__primary-top u-inline-center js-anime">
+            <h2 class="--primary">Grid</h2>
+            <p>
+              <span class="u-br">スマホは2列PCは4列なども</span>
+              <span class="u-br">属性値の付け替えでOK。</span><br />
+              <span class="u-br">間隔を開けるも閉じるも、属性で調整。</span><br />
+              <span class="u-br">間隔の大きさも拡張可能。</span>
+            </p>
+          </div>
+          <div class="originex" data-gutter="normal" data-dir="reverse">
+            <div class="originex__item js-anime" data-grid="xxs12 lg4">
+              <div class="p-heading p-heading__secondary-tb">
+                <h3 class="--secondary">Flexible</h3>
+                <p>
+                  スマホ、タブレット、PCで異なるカラムのレイアウトも容易に対応できます。
+                  12カラムをベースとして、必要なカラム数をカスタムデータ属性で指定するだけでレイアウトが可能。
+                </p>
+              </div>
+            </div>
+            <div class="originex__item" data-grid="xxs12 lg8">
+              <ul class="originex">
+                <li class="originex__item p-gallery" data-grid="xxs6">
+                  <img
+                    class="p-gallery__img"
+                    src="../assets/img/koto-1.jpg"
+                    srcset="../assets/img/koto-1.jpg, ../assets/img/koto-1@2.jpg 2x"
+                    alt=""
+                    decoding="async"
+                  />
+                  <span class="cap">SP： 6/12 - TAB: 6/12</span>
+                </li>
+                <li class="originex__item p-gallery" data-grid="xxs6">
+                  <img
+                    class="p-gallery__img"
+                    src="../assets/img/koto-2.jpg"
+                    srcset="../assets/img/koto-2.jpg, ../assets/img/koto-2@2.jpg 2x"
+                    alt=""
+                    decoding="async"
+                  />
+                  <span class="cap">SP： 6/12 - TAB: 6/12</span>
+                </li>
+                <li class="originex__item p-gallery" data-grid="xxs6 lg3">
+                  <img
+                    class="p-gallery__img"
+                    src="../assets/img/koto-3.jpg"
+                    srcset="../assets/img/koto-3.jpg, ../assets/img/koto-3@2.jpg 2x"
+                    alt=""
+                    decoding="async"
+                  />
+                  <span class="cap">SP： 6/12 - TAB: 3/12</span>
+                </li>
+                <li class="originex__item p-gallery" data-grid="xxs6 lg3">
+                  <img
+                    class="p-gallery__img"
+                    src="../assets/img/koto-4.jpg"
+                    srcset="../assets/img/koto-4.jpg, ../assets/img/koto-4@2.jpg 2x"
+                    alt=""
+                    decoding="async"
+                  />
+                  <span class="cap">SP： 6/12 - TAB: 3/12</span>
+                </li>
+                <li class="originex__item p-gallery" data-grid="xxs6 lg3">
+                  <img
+                    class="p-gallery__img"
+                    src="../assets/img/koto-5.jpg"
+                    srcset="../assets/img/koto-5.jpg, ../assets/img/koto-5@2.jpg 2x"
+                    alt=""
+                    decoding="async"
+                  />
+                  <span class="cap">SP： 6/12 - TAB: 3/12</span>
+                </li>
+                <li class="originex__item p-gallery" data-grid="xxs6 lg3">
+                  <img
+                    class="p-gallery__img"
+                    src="../assets/img/koto-6.jpg"
+                    srcset="../assets/img/koto-6.jpg, ../assets/img/koto-6@2.jpg 2x"
+                    alt=""
+                    decoding="async"
+                  />
+                  <span class="cap">SP： 6/12 - TAB: 3/12</span>
+                </li>
+                <li class="originex__item p-gallery" data-grid="xxs12 lg8">
+                  <img
+                    class="p-gallery__img"
+                    src="../assets/img/koto-7.jpg"
+                    srcset="../assets/img/koto-7.jpg, ../assets/img/koto-7@2.jpg 2x"
+                    alt=""
+                    decoding="async"
+                  />
+                  <span class="cap">SP： 6/12 - TAB: 3/12</span>
+                </li>
+                <li class="originex__item p-gallery" data-grid="xxs6 lg4">
+                  <img
+                    class="p-gallery__img"
+                    src="../assets/img/koto-8.jpg"
+                    srcset="../assets/img/koto-8.jpg, ../assets/img/koto-8@2.jpg 2x"
+                    alt=""
+                    decoding="async"
+                  />
+                  <span class="cap">SP： 6/12 - TAB: 6/12</span>
+                </li>
+                <li class="originex__item p-gallery" data-grid="xxs6 lg4">
+                  <img
+                    class="p-gallery__img"
+                    src="../assets/img/koto-9.jpg"
+                    srcset="../assets/img/koto-9.jpg, ../assets/img/koto-9@2.jpg 2x"
+                    alt=""
+                    decoding="async"
+                  />
+                  <span class="cap">SP： 6/12 - TAB: 4/12</span>
+                </li>
+                <li class="originex__item p-gallery" data-grid="xxs12 lg8">
+                  <img
+                    class="p-gallery__img"
+                    src="../assets/img/koto-10.jpg"
+                    srcset="../assets/img/koto-10.jpg, ../assets/img/koto-10@2.jpg 2x"
+                    alt=""
+                    decoding="async"
+                  />
+                  <span class="cap">SP： 12/12 - TAB: 8/122</span>
+                </li>
+                <li class="originex__item p-gallery" data-grid="xxs4 lg4">
+                  <img
+                    class="p-gallery__img"
+                    src="../assets/img/koto-11.jpg"
+                    srcset="../assets/img/koto-11.jpg, ../assets/img/koto-11@2.jpg 2x"
+                    alt=""
+                    decoding="async"
+                  />
+                  <span class="cap">SP： 4/12 - TAB: 4/12</span>
+                </li>
+                <li class="originex__item p-gallery" data-grid="xxs4 lg4">
+                  <img
+                    class="p-gallery__img"
+                    src="../assets/img/koto-12.jpg"
+                    srcset="../assets/img/koto-12.jpg, ../assets/img/koto-12@2.jpg 2x"
+                    alt=""
+                    decoding="async"
+                  />
+                  <span class="cap">SP： 4/12 - TAB: 4/12</span>
+                </li>
+                <li class="originex__item p-gallery" data-grid="xxs4 lg4">
+                  <img
+                    class="p-gallery__img"
+                    src="../assets/img/koto-13.jpg"
+                    srcset="../assets/img/koto-13.jpg, ../assets/img/koto-13@2.jpg 2x"
+                    alt=""
+                    decoding="async"
+                  />
+                  <span class="cap">SP： 4/12 - TAB: 4/12</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /Flexible -->
+          <div class="u-mt-x-large">
+            <div class="originex u-mt-x-large" data-gutter="normal">
+              <div class="originex__item" data-grid="xxs12 lg4">
+                <div class="p-heading p-heading__secondary-tb js-anime">
+                  <h3 class="--secondary">Gutter</h3>
+                  <p>
+                    各アイテム間のスペースもカスタムデータ属性を指定するだけで、スペースの有無はもちろん、その大きさも選択できます。また、このスペースには
+                    border プロパティを使っているので、スペースのサイズを拡張するのも容易です。
+                  </p>
+                </div>
+              </div>
+              <div class="originex__item" data-grid="xxs12 lg8">
+                <ul class="originex" data-gutter="normal">
+                  <li class="originex__item p-gallery" data-grid="xxs6">
+                    <img
+                      class="p-gallery__img"
+                      src="../assets/img/temple-1.jpg"
+                      srcset="../assets/img/temple-1.jpg, ../assets/img/temple-1@2.jpg 2x"
+                      alt=""
+                      decoding="async"
+                    />
+                    <span class="cap">SP： 4/12 - TAB: 4/12</span>
+                  </li>
+                  <li class="originex__item p-gallery" data-grid="xxs6">
+                    <img
+                      class="p-gallery__img"
+                      src="../assets/img/temple-2.jpg"
+                      srcset="../assets/img/temple-2.jpg, ../assets/img/temple-2@2.jpg 2x"
+                      alt=""
+                      decoding="async"
+                    />
+                    <span class="cap">SP： 4/12 - TAB: 4/12</span>
+                  </li>
+                  <li class="originex__item p-gallery" data-grid="xxs6 lg3">
+                    <img
+                      class="p-gallery__img"
+                      src="../assets/img/temple-3.jpg"
+                      srcset="../assets/img/temple-3.jpg, ../assets/img/temple-3@2.jpg 2x"
+                      alt=""
+                      decoding="async"
+                    />
+                    <span class="cap">SP： 4/12 - TAB: 4/12</span>
+                  </li>
+                  <li class="originex__item p-gallery" data-grid="xxs6 lg3">
+                    <img
+                      class="p-gallery__img"
+                      src="../assets/img/temple-4.jpg"
+                      srcset="../assets/img/temple-4.jpg, ../assets/img/temple-4@2.jpg 2x"
+                      alt=""
+                      decoding="async"
+                    />
+                    <span class="cap">SP： 4/12 - TAB: 4/12</span>
+                  </li>
+                  <li class="originex__item p-gallery" data-grid="xxs6 lg3">
+                    <img
+                      class="p-gallery__img"
+                      src="../assets/img/temple-5.jpg"
+                      srcset="../assets/img/temple-5.jpg, ../assets/img/temple-5@2.jpg 2x"
+                      alt=""
+                      decoding="async"
+                    />
+                    <span class="cap">SP： 4/12 - TAB: 4/12</span>
+                  </li>
+                  <li class="originex__item p-gallery" data-grid="xxs6 lg3">
+                    <img
+                      class="p-gallery__img"
+                      src="../assets/img/temple-6.jpg"
+                      srcset="../assets/img/temple-6.jpg, ../assets/img/temple-6@2.jpg 2x"
+                      alt=""
+                      decoding="async"
+                    />
+                    <span class="cap">SP： 4/12 - TAB: 4/12</span>
+                  </li>
+                  <li class="originex__item p-gallery" data-grid="xxs12 lg8">
+                    <img
+                      class="p-gallery__img"
+                      src="../assets/img/temple-7.jpg"
+                      srcset="../assets/img/temple-7.jpg, ../assets/img/temple-7@2.jpg 2x"
+                      alt=""
+                      decoding="async"
+                    />
+                    <span class="cap">SP： 4/12 - TAB: 4/12</span>
+                  </li>
+                  <li class="originex__item p-gallery" data-grid="xxs6 lg4">
+                    <img
+                      class="p-gallery__img"
+                      src="../assets/img/temple-8.jpg"
+                      srcset="../assets/img/temple-8.jpg, ../assets/img/temple-8@2.jpg 2x"
+                      alt=""
+                      decoding="async"
+                    />
+                    <span class="cap">SP： 4/12 - TAB: 4/12</span>
+                  </li>
+                  <li class="originex__item p-gallery" data-grid="xxs6 lg4">
+                    <img
+                      class="p-gallery__img"
+                      src="../assets/img/temple-9.jpg"
+                      srcset="../assets/img/temple-9.jpg, ../assets/img/temple-9@2.jpg 2x"
+                      alt=""
+                      decoding="async"
+                    />
+                    <span class="cap">SP： 4/12 - TAB: 4/12</span>
+                  </li>
+                  <li class="originex__item p-gallery" data-grid="xxs12 lg8">
+                    <img
+                      class="p-gallery__img"
+                      src="../assets/img/temple-10.jpg"
+                      srcset="../assets/img/temple-10.jpg, ../assets/img/temple-10@2.jpg 2x"
+                      alt=""
+                      decoding="async"
+                    />
+                    <span class="cap">SP： 4/12 - TAB: 4/12</span>
+                  </li>
+                  <li class="originex__item p-gallery" data-grid="xxs4 lg4">
+                    <img
+                      class="p-gallery__img"
+                      src="../assets/img/temple-11.jpg"
+                      srcset="../assets/img/temple-11.jpg, ../assets/img/temple-11@2.jpg 2x"
+                      alt=""
+                      decoding="async"
+                    />
+                    <span class="cap">SP： 4/12 - TAB: 4/12</span>
+                  </li>
+                  <li class="originex__item p-gallery" data-grid="xxs4 lg4">
+                    <img
+                      class="p-gallery__img"
+                      src="../assets/img/temple-12.jpg"
+                      srcset="../assets/img/temple-12.jpg, ../assets/img/temple-12@2.jpg 2x"
+                      alt=""
+                      decoding="async"
+                    />
+                    <span class="cap">SP： 4/12 - TAB: 4/12</span>
+                  </li>
+                  <li class="originex__item p-gallery" data-grid="xxs4 lg4">
+                    <img
+                      class="p-gallery__img"
+                      src="../assets/img/temple-13.jpg"
+                      srcset="../assets/img/temple-13.jpg, ../assets/img/temple-13@2.jpg 2x"
+                      alt=""
+                      decoding="async"
+                    />
+                    <span class="cap">SP： 4/12 - TAB: 4/12</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /grid -->
+      <section class="--back-black u-mt-large" id="alignment">
+        <div class="l-container u-pb-large js-anime">
+          <div class="p-heading p-heading__primary u-inline-center">
+            <h2 class="--primary --white">Alignment</h2>
+            <p class="--white">
+              <span class="u-br">水平方向の位置揃えや</span>
+              <span class="u-br">垂直方向の位置揃えもできます。</span><br />
+              <span class="u-br">左のカラムに大きな写真、右のカラムにはテキストを</span><br />
+              <span class="u-br">天地中央に配置なんてことも可能です。</span>
+            </p>
+          </div>
+          <ul class="originex" data-gutter="normal">
+            <li class="originex__item --back-color-darkn" data-grid="xxs4 lg2">
+              <div class="originex p-card__wrap" data-align="start">
+                <div class="originex__item">
+                  <p class="p-card__small u-txt-small">
+                    <img src="../assets/img/icon-left.svg" alt="" />
+                    <br />
+                    Left
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="originex__item --back-color-darkn" data-grid="xxs4 lg2">
+              <div class="originex p-card__wrap" data-align="center">
+                <div class="originex__item">
+                  <p class="p-card__small u-txt-small">
+                    <img src="../assets/img/icon-center.svg" alt="" />
+                    <br />
+                    Center
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="originex__item --back-color-darkn" data-grid="xxs4 lg2">
+              <div class="originex p-card__wrap" data-align="end">
+                <div class="originex__item">
+                  <p class="p-card__small u-txt-small">
+                    <img src="../assets/img/icon-right.svg" alt="" />
+                    <br />
+                    Right
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="originex__item --back-color-darkn" data-grid="xxs4 lg2">
+              <div class="originex p-card__wrap" data-align="top">
+                <div class="originex__item">
+                  <p class="p-card__small u-txt-small">
+                    <img src="../assets/img/icon-top.svg" alt="" />
+                    <br />
+                    Top
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="originex__item --back-color-darkn" data-grid="xxs4 lg2">
+              <div class="originex p-card__wrap" data-align="middle">
+                <div class="originex__item">
+                  <p class="p-card__small u-txt-small">
+                    <img src="../assets/img/icon-middle.svg" alt="" />
+                    <br />
+                    Middle
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="originex__item --back-color-darkn" data-grid="xxs4 lg2" data-align="bottom">
+              <div class="originex p-card__wrap" data-align="bottom">
+                <div class="originex__item">
+                  <p class="p-card__small u-txt-small">
+                    <img src="../assets/img/icon-bottom.svg" alt="" />
+                    <br />
+                    Bottom
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- /alignment -->
+      <section class="--before" id="direction">
+        <div class="l-container">
+          <div class="p-heading p-heading__primary u-inline-center js-anime">
+            <h2 class="--primary">Direction</h2>
+            <p>
+              <span class="u-br">カラムの並び順も変更可能。 </span><br />
+              <span class="u-br">カスタマイズ次第では、</span>
+              <span class="u-br">個別に順番を入れ替えることだってできる。</span>
+            </p>
+          </div>
+          <div class="originex" data-gutter="normal">
+            <div class="originex__item" data-grid="xxs12 lg6">
+              <div class="p-heading">
+                <h3 class="--secondary js-anime">Normal →</h3>
+              </div>
+              <ol class="originex p-card__dots" data-gutter="small">
+                <li class="originex__item" data-grid="xxs2">1</li>
+                <li class="originex__item" data-grid="xxs2">2</li>
+                <li class="originex__item" data-grid="xxs2">3</li>
+                <li class="originex__item" data-grid="xxs2">4</li>
+                <li class="originex__item" data-grid="xxs2">5</li>
+                <li class="originex__item" data-grid="xxs2">6</li>
+                <li class="originex__item" data-grid="xxs2">7</li>
+                <li class="originex__item" data-grid="xxs2">8</li>
+                <li class="originex__item" data-grid="xxs2">9</li>
+                <li class="originex__item" data-grid="xxs2">10</li>
+                <li class="originex__item" data-grid="xxs2">11</li>
+                <li class="originex__item" data-grid="xxs2">12</li>
+                <li class="originex__item" data-grid="xxs2">13</li>
+                <li class="originex__item" data-grid="xxs2">14</li>
+                <li class="originex__item" data-grid="xxs2">15</li>
+                <li class="originex__item" data-grid="xxs2">16</li>
+                <li class="originex__item" data-grid="xxs2">17</li>
+                <li class="originex__item" data-grid="xxs2">18</li>
+                <li class="originex__item" data-grid="xxs2">19</li>
+                <li class="originex__item" data-grid="xxs2">20</li>
+                <li class="originex__item" data-grid="xxs2">21</li>
+                <li class="originex__item" data-grid="xxs2">22</li>
+                <li class="originex__item" data-grid="xxs2">23</li>
+                <li class="originex__item" data-grid="xxs2">24</li>
+              </ol>
+            </div>
+            <div class="originex__item u-pb-medium --after-back" data-grid="xxs12 lg6">
+              <div class="p-heading">
+                <h3 class="--secondary u-inline-right js-anime">← Reverse</h3>
+              </div>
+              <ol class="originex p-card__dots" data-gutter="small" data-dir="reverse">
+                <li class="originex__item" data-grid="xxs2">1</li>
+                <li class="originex__item" data-grid="xxs2">2</li>
+                <li class="originex__item" data-grid="xxs2">3</li>
+                <li class="originex__item" data-grid="xxs2">4</li>
+                <li class="originex__item" data-grid="xxs2">5</li>
+                <li class="originex__item" data-grid="xxs2">6</li>
+                <li class="originex__item" data-grid="xxs2">7</li>
+                <li class="originex__item" data-grid="xxs2">8</li>
+                <li class="originex__item" data-grid="xxs2">9</li>
+                <li class="originex__item" data-grid="xxs2">10</li>
+                <li class="originex__item" data-grid="xxs2">11</li>
+                <li class="originex__item" data-grid="xxs2">12</li>
+                <li class="originex__item" data-grid="xxs2">13</li>
+                <li class="originex__item" data-grid="xxs2">14</li>
+                <li class="originex__item" data-grid="xxs2">15</li>
+                <li class="originex__item" data-grid="xxs2">16</li>
+                <li class="originex__item" data-grid="xxs2">17</li>
+                <li class="originex__item" data-grid="xxs2">18</li>
+                <li class="originex__item" data-grid="xxs2">19</li>
+                <li class="originex__item" data-grid="xxs2">20</li>
+                <li class="originex__item" data-grid="xxs2">21</li>
+                <li class="originex__item" data-grid="xxs2">22</li>
+                <li class="originex__item" data-grid="xxs2">23</li>
+                <li class="originex__item" data-grid="xxs2">24</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /direction -->
+    </main>
+    <footer class="l-footer">
+      <div class="l-container">
+        <ul class="originex" data-gutter="normal">
+          <li class="originex__item" data-grid="xsFive">
+            <figure class="p-gallery">
+              <img
+                src="../assets/img/footer-1.jpg"
+                srcset="../assets/img/footer-1.jpg, ../assets/img/footer-1@2.jpg 2x"
+                decoding="async"
+                class="p-gallery__img"
+                alt=""
+              />
+            </figure>
+          </li>
+          <li class="originex__item" data-grid="xsFive">
+            <figure class="p-gallery">
+              <img
+                src="../assets/img/footer-2.jpg"
+                srcset="../assets/img/footer-2.jpg, ../assets/img/footer-2@2.jpg 2x"
+                decoding="async"
+                class="p-gallery__img"
+                alt=""
+              />
+            </figure>
+          </li>
+          <li class="originex__item" data-grid="xsFive">
+            <figure class="p-gallery">
+              <img
+                src="../assets/img/footer-3.jpg"
+                srcset="../assets/img/footer-3.jpg, ../assets/img/footer-3@2.jpg 2x"
+                decoding="async"
+                class="p-gallery__img"
+                alt=""
+              />
+            </figure>
+          </li>
+          <li class="originex__item" data-grid="xsFive">
+            <figure class="p-gallery">
+              <img
+                src="../assets/img/footer-4.jpg"
+                srcset="../assets/img/footer-4.jpg, ../assets/img/footer-4@2.jpg 2x"
+                decoding="async"
+                class="p-gallery__img"
+                alt=""
+              />
+            </figure>
+          </li>
+          <li class="originex__item" data-grid="xsFive">
+            <figure class="p-gallery">
+              <img
+                src="../assets/img/footer-5.jpg"
+                srcset="../assets/img/footer-5.jpg, ../assets/img/footer-5@2.jpg 2x"
+                decoding="async"
+                class="p-gallery__img"
+                alt=""
+              />
+            </figure>
+          </li>
+        </ul>
+      </div>
+      <div class="l-footer__bottom">
+        <div class="l-container">
+          <h2 class="p-heading__jp u-inline-center">
+            <span class="u-br">さぁ、あなたも自分の</span>
+            <span class="u-br">CSSグリッドシステムを作ろう</span>
+          </h2>
+
+          <p class="u-inline-center u-pd-small"><a class="c-btn --primaryline" href="#">How to Make</a></p>
+          <ul class="originex l-footer__end" data-align="justify">
+            <li class="originex__item" data-grid="xxs12 lgAuto">
+              <p class="l-footer__primary u-inline-center__sp">
+                <span class="u-br">Olex.css</span><br />
+                <small class="u-br">Ore no Flexible CSS Grid System.</small>
+              </p>
+            </li>
+            <li class="originex__item" data-grid="xxs12 lgAuto">
+              <dl class="originex u-inline-center__sp l-footer__sns" data-gutter="small">
+                <dt class="originex__item" data-grid="xxs12 lgAuto">Folow Me</dt>
+                <dd class="originex__item" data-grid="xxs12 lgAuto">
+                  <ul class="originex" data-gutter="small" data-align="center">
+                    <li class="originex__item">
+                      <span class="u-visibility-hidden">twitter</span
+                      ><a href="#"><img src="../assets/img/twitter.svg" alt="" /></a>
+                    </li>
+                    <li class="originex__item">
+                      <span class="u-visibility-hidden">instagram</span
+                      ><a href="#"><img src="../assets/img/instagram.png" alt="" /></a>
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
+              <p class="u-inline-center__sp u-inline-right-pc"><small lang="en">&copy;2022 mito</small></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

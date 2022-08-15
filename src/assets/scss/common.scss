@@ -1,0 +1,44 @@
+// @import "foundation/*";
+// @import "layout/*";
+/* ==========================================================================
+   Foundation
+   ========================================================================== */
+@forward "foundation/reset";
+@forward "foundation/base";
+@forward "foundation/settings";
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+@forward "layout/centering";
+@forward "layout/fotter";
+@forward "layout/header";
+@forward "layout/main";
+@forward "layout/originex.scss";
+/* ==========================================================================
+   Onject -component
+   ========================================================================== */
+
+@forward "object/component/button";
+@forward "object/component/fadein";
+/* ==========================================================================
+   Onject -project
+   ========================================================================== */
+@forward "object/project/gallery";
+@forward "object/project/logo";
+@forward "object/project/heading";
+@forward "object/project/hero";
+@forward "object/project/globalnav";
+@forward "object/project/card";
+
+/* ==========================================================================
+   Onject -utility
+   ========================================================================== */
+
+@forward "object/utility/align";
+@forward "object/utility/clearfix";
+@forward "object/utility/margin";
+@forward "object/utility/padding";
+@forward "object/utility/position";
+@forward "object/utility/size";
+@forward "object/utility/text";

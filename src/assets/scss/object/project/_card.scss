@@ -1,0 +1,54 @@
+@use "../../foundation/settings";
+@use "../../foundation/mixins";
+.p-card {
+  padding: calc(62px / 16px) * 1rem;
+
+  &:first-child {
+    margin-top: calc(100px / 16px) * -1rem;
+    @include mixins.media__lg {
+      margin-top: 0;
+    }
+  }
+  &__grid {
+    &:before {
+      content: url("../img/grid.svg");
+      display: block;
+    }
+  }
+  &__align {
+    &:before {
+      content: url("../img/alignment.svg");
+      display: block;
+    }
+  }
+  &__direction {
+    &:before {
+      content: url("../img/direction.svg");
+      display: block;
+    }
+  }
+  &__small {
+    text-align: center;
+    background-color: var(--white);
+    padding: 0.5rem;
+    img {
+      max-width: 5vw;
+      height: auto;
+      margin-bottom: 0.5rem 1rem;
+    }
+  }
+  &__wrap {
+    height: 15vh;
+  }
+  &__dots {
+    li {
+      background-color: var(--back-color-point-gray);
+      padding: 2.5rem 0.5rem;
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+  &__dots:nth-child(even) li {
+    background-color: var(--back-color-lignt-gray);
+  }
+}

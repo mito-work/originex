@@ -1,0 +1,12 @@
+@use "../../foundation/mixins";
+.u-mt-medium {
+  margin-top: calc(24px / 16px) * 1rem;
+}
+.u-mt-large {
+  margin-top: calc(40px / 16px) * 1rem;
+}
+.u-mt-x-large {
+  @include mixins.media__lg {
+    margin: calc(120px / 16px) * 1rem 0;
+  }
+}

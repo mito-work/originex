@@ -1,0 +1,181 @@
+/* ============================================
+  Originex - Original Flexible CSS Grid System
+============================================ */
+
+/*
+ Settings
+--------------------------------- */
+//Grid Column
+$column: 12;
+
+//Gutter Sixe
+$gutters: (
+  small: 1vw,
+  normal: 2vw,
+  large: 3vw,
+) !default;
+
+//Breakpoints
+$breakpoints: (
+  xxs: 0,
+  xs: 360px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+
+/*
+ Base
+--------------------------------- */
+/*
+  <div class="originex">
+    <div class="originex__item">A</div>
+    <div class="originex__item">B</div>
+    <div class="originex__item">C</div>
+  </div>
+*/
+.originex {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  &__item {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+/*
+ Direction
+--------------------------------- */
+/*
+  <div class="originex" data-dir="reverse">
+    <div class="originex__item">A</div>
+    <div class="originex__item">B</div>
+    <div class="originex__item">C</div>
+  </div>
+*/
+.originex {
+  &[data-dir="normal"] {
+    flex-direction: row;
+  }
+  &[data-dir="reverse"] {
+    flex-direction: row-reverse;
+  }
+}
+
+/*
+  Alignment columnの主軸に対して
+--------------------------------- */
+/*
+  <div class="originex" data-align="center">
+    <div class="originex__item">A</div>
+    <div class="originex__item">B</div>
+    <div class="originex__item" data-align="end middle">C</div>
+  </div>
+*/
+.originex {
+  // data-alignに対して、startという語が含まれているもの
+  &[data-align~="start"] {
+    justify-content: flex-start;
+  }
+  &[data-align~="center"] {
+    justify-content: center;
+  }
+  &[data-align~="end"] {
+    justify-content: flex-end;
+  }
+  &[data-align~="justify"] {
+    justify-content: space-between;
+  }
+  &[data-align~="top"] {
+    align-items: flex-start;
+  }
+  &[data-align~="middle"] {
+    align-items: center;
+  }
+  &[data-align~="bottom"] {
+    align-items: flex-end;
+  }
+  &__item {
+    &[data-align~="start"] {
+      align-items: flex-start;
+    }
+    &[data-align~="center"] {
+      align-items: center;
+    }
+    &[data-align~="end"] {
+      align-items: flex-end;
+    }
+    &[data-align~="top"] {
+      justify-content: flex-start;
+      align-self: stretch;
+    }
+    &[data-align~="middle"] {
+      justify-content: center;
+      align-self: stretch;
+    }
+    &[data-align~="bottom"] {
+      justify-content: flex-end;
+      align-self: stretch;
+    }
+  }
+}
+/*
+  Grid
+--------------------------------- */
+/*
+  <div class="originex" data-gutter="normal">
+    <div class="originex__item" data-grid="xxs12 md4 lg6">A</div>
+    <div class="originex__item" data-grid="xxs12 md4 lg6">B</div>
+    <div class="originex__item" data-grid="xxs12 md4 lg6">C</div>
+  </div>
+*/
+.originex {
+  $this: &;
+  &[data-gutter] {
+    width: auto;
+
+    & > #{$this}__item {
+      border: solid transparent;
+      background-clip: padding-box;
+    }
+  }
+  @each $device, $breakpoint in $breakpoints {
+    @media screen and (min-width: $breakpoint) {
+      $ratio: 2.5;
+
+      @if $breakpoint >= 768 {
+        $ratio: 1.5;
+      }
+      @if $breakpoint >= 1024 {
+        $ratio: 1;
+      }
+      @each $size, $val in $gutters {
+        &[data-gutter="#{$size}"] {
+          margin: -($val * $ratio / 2);
+          & > #{$this}__item {
+            border-width: ($val * $ratio / 2);
+          }
+        }
+      }
+      &__item {
+        @for $i from 1 through $column {
+          &[data-grid~="#{$device + $i}"] {
+            width: percentage($i / $column);
+          }
+        }
+        &[data-grid~="#{$device}Five"] {
+          width: 20%;
+        }
+        &[data-grid~="#{$device}Auto"] {
+          width: auto;
+        }
+      }
+    }
+  }
+}

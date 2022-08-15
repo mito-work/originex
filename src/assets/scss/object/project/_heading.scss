@@ -1,0 +1,44 @@
+@use "../../foundation/settings";
+@use "../../foundation/mixins";
+.p-header {
+  mix-blend-mode: exclusion;
+}
+.p-heading {
+  &__primary {
+    @include mixins.media__lg {
+      padding: calc(95px / 16px) * 1rem 0;
+    }
+    padding: calc(70px / 16px) * 1rem 0;
+  }
+  &__primary-top {
+    padding-top: calc(64px / 16px) * 1rem;
+    @include mixins.media__lg {
+      padding: calc(95px / 16px) * 1rem 0;
+    }
+  }
+  &__jp {
+    font-size: calc(21px / 16px) * 1rem;
+  }
+  .--primary {
+    font-size: calc(32px / 16px) * 1rem;
+    @include mixins.media__lg {
+      font-size: calc(64px / 16px) * 1rem;
+    }
+  }
+
+  &__secondary {
+    padding: calc(64px / 16px) * 1rem 6.25vw calc(124px / 16px) * 1rem 6.25vw;
+  }
+  &__secondary-tb {
+    padding: calc(64px / 16px) * 1rem 0;
+  }
+  .--secondary,
+  .--third {
+    font-size: calc(24px / 16px) * 1rem;
+  }
+  .--secondary {
+    @include mixins.media__lg {
+      font-size: calc(48px / 16px) * 1rem;
+    }
+  }
+}

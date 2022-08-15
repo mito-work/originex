@@ -1,0 +1,11 @@
+@use "../../foundation/settings";
+@use "../../foundation/mixins";
+.p-logo {
+  display: inline-block;
+  font-size: 1.25rem;
+  @include mixins.media__lg {
+    font-size: 2rem;
+  }
+  font-weight: 700;
+  color: var(--white);
+}

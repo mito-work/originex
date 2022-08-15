@@ -1,0 +1,22 @@
+@use "../../foundation/mixins";
+.u-inline-center {
+  text-align: center;
+  &__sp {
+    text-align: center;
+    @include mixins.media__lg {
+      text-align: left;
+    }
+  }
+}
+
+@include mixins.media__lg {
+  .u-inline-right-pc {
+    text-align: right;
+  }
+}
+.u-inline-right {
+  text-align: right;
+}
+.u_space-evenly {
+  justify-content: space-evenly;
+}
