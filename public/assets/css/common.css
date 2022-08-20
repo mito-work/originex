@@ -155,7 +155,7 @@ a {
 body {
   background-color: var(--white);
   color: var(--main-color);
-  font-family: "Montserrat", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "メイリオ", Meiryo, sans-serif;
+  font-family: "Montserrat", -apple-system, system-ui, "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "メイリオ", Meiryo, sans-serif;
 }
 
 img {
@@ -388,7 +388,7 @@ section.--back-gray {
   border-radius: 50px;
   outline: 0;
   color: var(--white);
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -561,10 +561,14 @@ section.--back-gray {
   line-height: 1.25;
 }
 .p-hero__body {
-  padding: 8rem 0 6.75vw 0;
+  padding: 10rem 0 6.75vw 0;
+}
+.p-hero__text {
+  margin-top: 1.5rem;
+  line-height: 2;
 }
 .p-hero__wrapper {
-  padding: 4rem 6.25vw;
+  padding: 3rem 6.25vw;
   background-color: var(--main-color);
 }
 .p-hero-img {
@@ -1114,11 +1118,19 @@ body.is-drawerActive .p-drawer {
   .p-hero__heading {
     font-size: 5.1244509517vw;
   }
+  .p-hero__text {
+    margin-top: 3.75rem;
+    font-size: 1.1rem;
+  }
   .p-hero__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
+    padding: 0 6.25vw;
+  }
+  .p-hero__wrapper figure {
+    margin-top: 6.25rem;
   }
   .p-drawer {
     position: static;
@@ -1147,6 +1159,9 @@ body.is-drawerActive .p-drawer {
   }
   .u-inline-right-pc {
     text-align: right;
+  }
+  .u-mt-large {
+    margin-top: 5rem;
   }
   .u-mt-x-large {
     margin: 7.5rem 0;
@@ -1281,7 +1296,7 @@ body.is-drawerActive .p-drawer {
     width: auto;
   }
   .p-hero__heading {
-    font-size: 5vw;
+    font-size: 5.3571428571vw;
   }
 }
 

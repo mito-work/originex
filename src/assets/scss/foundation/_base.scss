@@ -1,8 +1,8 @@
 @use "settings.scss";
 @use "mixins.scss";
 body {
-  font-family: "Montserrat", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3",
-    "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "メイリオ", Meiryo, sans-serif;
+  font-family: "Montserrat", -apple-system, system-ui, "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic",
+    "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "メイリオ", Meiryo, sans-serif;
 
   color: var(--main-color);
   background-color: var(--white);

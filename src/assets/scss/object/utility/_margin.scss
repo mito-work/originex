@@ -4,6 +4,9 @@
 }
 .u-mt-large {
   margin-top: calc(40px / 16px) * 1rem;
+  @include mixins.media__lg {
+    margin-top: calc(80px / 16px) * 1rem;
+  }
 }
 .u-mt-x-large {
   @include mixins.media__lg {

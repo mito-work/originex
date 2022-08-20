@@ -10,20 +10,32 @@
       font-size: calc(100 / 1366px) * 70px * 1vw;
     }
     @include mixins.media__xxl {
-      font-size: calc(100 / 1400px) * 70px * 1vw;
+      font-size: calc(100 / 1400px) * 75px * 1vw;
     }
   }
   &__body {
-    padding: 8rem 0 6.75vw 0;
+    padding: 10rem 0 6.75vw 0;
+  }
+  &__text {
+    line-height: 2;
+    margin-top: calc(24px / 16px) * 1rem;
+    @include mixins.media__lg {
+      margin-top: calc(60px / 16px) * 1rem;
+      font-size: 1.1rem;
+    }
   }
   &__wrapper {
-    padding: 4rem 6.25vw;
+    padding: 3rem 6.25vw;
     background-color: var(--main-color);
     @include mixins.media__lg {
+      padding: 0 6.25vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
       min-height: 100vh;
+      figure {
+        margin-top: 6.25rem;
+      }
     }
   }
   &-img {
