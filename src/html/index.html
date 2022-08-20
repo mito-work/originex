@@ -16,15 +16,15 @@
     <script src="//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/ScrollTrigger.min.js"></script>
   </head>
   <body>
-    <header class="l-header p-header">
+    <header class="l-header p-header js-anime">
       <div class="l-container">
         <div class="originex" data-align="justify middle">
-          <h1 class="originex__item js-anime">
+          <h1 class="originex__item">
             <span class="u-visibility-hidden">Olex.css</span>
             <a class="p-logo" href="index.html">Olex.css</a>
           </h1>
           <nav class="originex__item">
-            <button type="button" class="js-drawer c-btn --hamburger" aria-controls="global-nav" aria-expanded="false">
+            <button type="button" class="js-drawer c-btn --hamburger" aria-controls="gloval-nav" aria-expanded="false">
               <span class="--hamburger__line">
                 <span class="u-visibility-hidden">メニューを開閉する</span>
               </span>
@@ -53,18 +53,18 @@
           <div class="p-hero__body">
             <div class="l-container">
               <h2 class="p-hero__heading">
-                <span class="u-br js-trigger">Ore no</span>
+                <span class="u-br">Ore no</span>
                 <span class="u-br">Flexible CSS</span>
                 <span class="u-br">Grid System.</span>
               </h2>
-              <p class="u-mt-medium u-main-txt js-anime">
+              <p class="u-mt-medium u-main-txt">
                 <span class="u-br">俺流のフレキシブルCSSグリッドシステム</span>
                 <span class="u-br">「Olex」のデモページ。</span>
                 <span class="u-br">「Olex」はFlexboxを利用した</span>
                 <span class="u-br">単なるグリッドシステムなので、</span>
                 <span class="u-br">気になった方は、解説ページを参考に自分で作ってもらえたらと思います。</span>
               </p>
-              <p class="u-mt-large u-inline-center js-anime"><a class="c-btn --primary" href="#">How to Make</a></p>
+              <p class="u-mt-large u-inline-center"><a class="c-btn --primary" href="#">How to Make</a></p>
             </div>
           </div>
         </div>
@@ -116,39 +116,43 @@
             </p>
           </div>
         </div>
-        <div class="originex --back-gray u-pb-medium --before">
-          <div class="originex__item --back-black --before-back" data-grid="xxs12 lg4">
-            <div class="p-heading p-heading__secondary js-anime">
-              <h3 class="--secondary --white">Feature</h3>
-              <p class="--white">
-                Flexboxを利用したグリッドシステムで、単なる横並びや12カラムをベースとしたグリッドレイアウトも可能です。グリッド間のスペースにはborderを利用していて間隔の調整が容易にできます。もちろんこのページのレイアウトは「Olex.css」を使っているので、詳しくはデベロッパーツールで。
-              </p>
+        <section class="--back-gray p-heading__primary --before --before-back u-flex__center">
+          <div class="l-container">
+            <div class="originex" data-gutter="normal">
+              <div class="originex__item" data-grid="xxs12 xl3">
+                <div class="p-heading js-anime">
+                  <h3 class="--secondary --white">Feature</h3>
+                  <p class="--white">
+                    Flexboxを利用したグリッドシステムで、単なる横並びや12カラムをベースとしたグリッドレイアウトも可能です。グリッド間のスペースにはborderを利用していて間隔の調整が容易にできます。もちろんこのページのレイアウトは「Olex.css」を使っているので、詳しくはデベロッパーツールで。
+                  </p>
+                </div>
+              </div>
+              <section class="originex__item u_space-evenly" data-grid="xxs12 xl9">
+                <ul class="originex" data-align="center" data-gutter="small">
+                  <li class="originex__item p-heading u-inline-center p-card --back-white" data-grid="xxs10 lg4">
+                    <h4 class="--third p-card__grid">Grid</h4>
+                    <p class="u-mt-medium font-small">12カラムを基準とした グリッドシステム。</p>
+                  </li>
+                  <li class="originex__item p-heading u-inline-center p-card --back-white" data-grid="xxs10 lg4">
+                    <h4 class="--third p-card__align">Alignment</h4>
+                    <p class="u-mt-medium font-small">各アイテムの位置を揃える こともできる。</p>
+                  </li>
+                  <li class="originex__item p-heading u-inline-center p-card --back-white" data-grid="xxs10 lg4">
+                    <h4 class="--third p-card__direction">Direction</h4>
+                    <p class="u-mt-medium font-small">
+                      <span class="u-br">アイテムの並び順を</span><span class="u-br">逆順に変更できる。</span>
+                    </p>
+                  </li>
+                </ul>
+              </section>
             </div>
           </div>
-          <div class="originex__item u_space-evenly" data-grid="xxs12 lg8">
-            <ul class="originex" data-align="center" data-gutter="small">
-              <li class="originex__item p-heading u-inline-center p-card --back-white" data-grid="xxs10 lg4">
-                <h4 class="--third p-card__grid">Grid</h4>
-                <p class="u-mt-medium font-small">12カラムを基準とした グリッドシステム。</p>
-              </li>
-              <li class="originex__item p-heading u-inline-center p-card --back-white" data-grid="xxs10 lg4">
-                <h4 class="--third p-card__align">Alignment</h4>
-                <p class="u-mt-medium font-small">各アイテムの位置を揃える こともできる。</p>
-              </li>
-              <li class="originex__item p-heading u-inline-center p-card --back-white" data-grid="xxs10 lg4">
-                <h4 class="--third p-card__direction">Direction</h4>
-                <p class="u-mt-medium font-small">
-                  <span class="u-br">アイテムの並び順を</span><span class="u-br">逆順に変更できる。</span>
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
+        </section>
       </section>
       <!-- /overview -->
       <section id="grid">
         <div class="l-container">
-          <div class="p-heading p-heading__primary-top u-inline-center js-anime">
+          <div class="p-heading p-heading__primary-top u-inline-center">
             <h2 class="--primary">Grid</h2>
             <p>
               <span class="u-br">スマホは2列PCは4列なども</span>
@@ -157,9 +161,9 @@
               <span class="u-br">間隔の大きさも拡張可能。</span>
             </p>
           </div>
-          <div class="originex" data-gutter="normal" data-dir="reverse">
-            <div class="originex__item js-anime" data-grid="xxs12 lg4">
-              <div class="p-heading p-heading__secondary-tb">
+          <section class="originex" data-gutter="normal" data-dir="reverse">
+            <div class="originex__item sticky__container" data-grid="xxs12 lg4">
+              <div class="p-heading p-heading__secondary-tb sticky__item js-anime">
                 <h3 class="--secondary">Flexible</h3>
                 <p>
                   スマホ、タブレット、PCで異なるカラムのレイアウトも容易に対応できます。
@@ -301,12 +305,12 @@
                 </li>
               </ul>
             </div>
-          </div>
+          </section>
           <!-- /Flexible -->
           <div class="u-mt-x-large">
-            <div class="originex u-mt-x-large" data-gutter="normal">
-              <div class="originex__item" data-grid="xxs12 lg4">
-                <div class="p-heading p-heading__secondary-tb js-anime">
+            <section class="originex u-mt-x-large" data-gutter="normal">
+              <div class="originex__item stiky__container" data-grid="xxs12 lg4">
+                <div class="p-heading p-heading__secondary-tb sticky__item js-anime">
                   <h3 class="--secondary">Gutter</h3>
                   <p>
                     各アイテム間のスペースもカスタムデータ属性を指定するだけで、スペースの有無はもちろん、その大きさも選択できます。また、このスペースには
@@ -448,7 +452,7 @@
                   </li>
                 </ul>
               </div>
-            </div>
+            </section>
           </div>
         </div>
       </section>
@@ -465,9 +469,9 @@
             </p>
           </div>
           <ul class="originex" data-gutter="normal">
-            <li class="originex__item --back-color-darkn" data-grid="xxs4 lg2">
+            <li class="originex__item --back-color-darkn p-card__sm" data-grid="xxs4 lg2">
               <div class="originex p-card__wrap" data-align="start">
-                <div class="originex__item">
+                <div class="originex__item --back-white --justify" data-align="middle">
                   <p class="p-card__small u-txt-small">
                     <img src="../assets/img/icon-left.svg" alt="" />
                     <br />
@@ -476,9 +480,9 @@
                 </div>
               </div>
             </li>
-            <li class="originex__item --back-color-darkn" data-grid="xxs4 lg2">
+            <li class="originex__item --back-color-darkn p-card__sm" data-grid="xxs4 lg2">
               <div class="originex p-card__wrap" data-align="center">
-                <div class="originex__item">
+                <div class="originex__item --back-white --justify" data-align="middle">
                   <p class="p-card__small u-txt-small">
                     <img src="../assets/img/icon-center.svg" alt="" />
                     <br />
@@ -487,9 +491,9 @@
                 </div>
               </div>
             </li>
-            <li class="originex__item --back-color-darkn" data-grid="xxs4 lg2">
+            <li class="originex__item --back-color-darkn p-card__sm" data-grid="xxs4 lg2">
               <div class="originex p-card__wrap" data-align="end">
-                <div class="originex__item">
+                <div class="originex__item --back-white --justify" data-align="middle">
                   <p class="p-card__small u-txt-small">
                     <img src="../assets/img/icon-right.svg" alt="" />
                     <br />
@@ -499,8 +503,8 @@
               </div>
             </li>
 
-            <li class="originex__item --back-color-darkn" data-grid="xxs4 lg2">
-              <div class="originex p-card__wrap" data-align="top">
+            <li class="originex__item --back-color-darkn p-card__sm p-card-h" data-grid="xxs4 lg2">
+              <div class="originex p-card__wrap --back-white" data-align="center">
                 <div class="originex__item">
                   <p class="p-card__small u-txt-small">
                     <img src="../assets/img/icon-top.svg" alt="" />
@@ -511,8 +515,8 @@
               </div>
             </li>
 
-            <li class="originex__item --back-color-darkn" data-grid="xxs4 lg2">
-              <div class="originex p-card__wrap" data-align="middle">
+            <li class="originex__item --back-color-darkn p-card__sm p-card-h" data-grid="xxs4 lg2" data-align="middle">
+              <div class="originex p-card__wrap --back-white" data-align="center">
                 <div class="originex__item">
                   <p class="p-card__small u-txt-small">
                     <img src="../assets/img/icon-middle.svg" alt="" />
@@ -523,8 +527,8 @@
               </div>
             </li>
 
-            <li class="originex__item --back-color-darkn" data-grid="xxs4 lg2" data-align="bottom">
-              <div class="originex p-card__wrap" data-align="bottom">
+            <li class="originex__item --back-color-darkn p-card__sm p-card-h" data-grid="xxs4 lg2" data-align="bottom">
+              <div class="originex p-card__wrap --back-white" data-align="center">
                 <div class="originex__item">
                   <p class="p-card__small u-txt-small">
                     <img src="../assets/img/icon-bottom.svg" alt="" />
@@ -548,7 +552,7 @@
               <span class="u-br">個別に順番を入れ替えることだってできる。</span>
             </p>
           </div>
-          <div class="originex" data-gutter="normal">
+          <section class="originex" data-gutter="normal">
             <div class="originex__item" data-grid="xxs12 lg6">
               <div class="p-heading">
                 <h3 class="--secondary js-anime">Normal →</h3>
@@ -611,12 +615,12 @@
                 <li class="originex__item" data-grid="xxs2">24</li>
               </ol>
             </div>
-          </div>
+          </section>
         </div>
       </section>
       <!-- /direction -->
     </main>
-    <footer class="l-footer">
+    <footer class="l-footer js-anime">
       <div class="l-container">
         <ul class="originex" data-gutter="normal">
           <li class="originex__item" data-grid="xxsFive">
@@ -678,10 +682,10 @@
       </div>
       <div class="l-footer__bottom">
         <div class="l-container">
-          <h2 class="p-heading__jp u-inline-center">
+          <p class="p-heading__jp u-inline-center">
             <span class="u-br">さぁ、あなたも自分の</span>
             <span class="u-br">CSSグリッドシステムを作ろう</span>
-          </h2>
+          </p>
 
           <p class="u-inline-center u-pd-small"><a class="c-btn --primaryline" href="#">How to Make</a></p>
           <ul class="originex l-footer__end" data-align="justify">

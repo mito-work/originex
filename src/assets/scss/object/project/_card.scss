@@ -4,9 +4,17 @@
   padding: calc(62px / 16px) * 1rem;
 
   &:first-child {
-    margin-top: calc(100px / 16px) * -1rem;
+    // margin-top: calc(100px / 16px) * -1rem;
+    // @include mixins.media__lg {
+    //   margin-top: 0;
+    // }
+  }
+  &-h {
+    height: 25vh;
+  }
+  &__sm {
     @include mixins.media__lg {
-      margin-top: 0;
+      height: auto;
     }
   }
   &__grid {
@@ -31,14 +39,18 @@
     text-align: center;
     background-color: var(--white);
     padding: 0.5rem;
+
     img {
       max-width: 5vw;
       height: auto;
       margin-bottom: 0.5rem 1rem;
     }
   }
+
   &__wrap {
-    height: 15vh;
+    .--justify {
+      padding: 3rem 0.5rem;
+    }
   }
   &__dots {
     li {

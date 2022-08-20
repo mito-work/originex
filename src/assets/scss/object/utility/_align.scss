@@ -20,3 +20,9 @@
 .u_space-evenly {
   justify-content: space-evenly;
 }
+.u-flex__center {
+  justify-content: center;
+  // @include mixins.media__lg {
+  //   justify-content: flex-start;
+  // }
+}

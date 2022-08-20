@@ -5,8 +5,12 @@
     font-weight: 700;
     font-size: calc(100 / 375px) * 44px * 1vw;
     line-height: 1.25;
+    //min 992px
     @include mixins.media__lg {
-      font-size: calc(100 / 1366px) * 80px * 1vw;
+      font-size: calc(100 / 1366px) * 70px * 1vw;
+    }
+    @include mixins.media__xxl {
+      font-size: calc(100 / 1400px) * 70px * 1vw;
     }
   }
   &__body {

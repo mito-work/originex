@@ -28,7 +28,7 @@ gsap.set(".js-anime", { opacity: 0, y: 100 }); //初期状態をセット
 
 ScrollTrigger.batch(".js-anime", {
   onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0 }),
-  start: "top 50%",
+  start: "top 40%",
   once: true,
   markers: false,
 });

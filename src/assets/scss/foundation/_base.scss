@@ -28,7 +28,8 @@ small {
 .font-small {
   font-size: calc(12px / 16px) * 1rem;
 }
-.originex.--back-gray {
+.originex.--back-gray,
+section.--back-gray {
   background-color: var(--back-color-lignt-gray);
 }
 .originex__item.--back-color-darkn {
@@ -37,7 +38,8 @@ small {
 .originex__item.--back-black {
   background-color: var(--main-color);
 }
-.originex__item.--back-white {
+.originex__item.--back-white,
+.originex.--back-white {
   background-color: var(--white);
 }
 .--back-black {
@@ -56,18 +58,26 @@ small {
     z-index: 1;
   }
 }
-.originex__item.--before-back {
-  @include mixins.media__lg {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
+.--before-back {
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @include mixins.media__lg {
+      height: 60%;
+    }
+    height: 30%;
+    background-color: var(--main-color);
+
+    @include mixins.media__xl {
       bottom: 0;
       width: 40%;
       height: auto;
-      background-color: var(--main-color);
-      z-index: -1;
     }
   }
 }

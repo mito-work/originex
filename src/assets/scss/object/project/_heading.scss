@@ -28,6 +28,11 @@
 
   &__secondary {
     padding: calc(64px / 16px) * 1rem 6.25vw calc(124px / 16px) * 1rem 6.25vw;
+    @include mixins.media__lg {
+      &-var {
+        padding: calc(64px / 16px) * 1rem 0 calc(64px / 16px) * 1rem 6.25vw;
+      }
+    }
   }
   &__secondary-tb {
     padding: calc(64px / 16px) * 1rem 0;
@@ -40,5 +45,11 @@
     @include mixins.media__lg {
       font-size: calc(48px / 16px) * 1rem;
     }
+  }
+}
+@include mixins.media__lg {
+  .sticky__item {
+    position: sticky;
+    top: 10%;
   }
 }
