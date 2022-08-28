@@ -1,16 +1,17 @@
 @use "../foundation/settings";
 @use "../foundation/mixins";
 .l-footer {
+  background-color: var(--back-color-darkn);
   color: var(--white);
+  padding-top: 3.5rem;
   &__bottom {
-    background-color: var(--back-color-darkn);
-    padding: calc(135px / 16px) * 1rem 0 calc(64px / 16px) * 1rem 0;
+    // padding: calc(135px / 16px) * 1rem 0 calc(64px / 16px) * 1rem 0;
     @include mixins.media__lg {
-      padding-top: 40.3125rem;
+      // padding-top: 40.3125rem;
     }
-    margin-top: -1rem * calc(100px / 16px);
+    // margin-top: -1rem * calc(100px / 16px);
     @include mixins.media__lg {
-      margin-top: -1rem * calc(590px / 16px);
+      // margin-top: -1rem * calc(590px / 16px);
     }
   }
   &__end {

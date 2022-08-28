@@ -55,12 +55,12 @@ section.--back-gray {
 .--before {
   @include mixins.media__lg {
     position: relative;
-    z-index: 1;
+    z-index: 0;
   }
 }
 .--before-back {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   &::before {
     content: "";
     position: absolute;
@@ -82,17 +82,18 @@ section.--back-gray {
   }
 }
 .originex__item.--after-back {
-  @include mixins.media__lg {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    @include mixins.media__lg {
       width: 50%;
-      height: auto;
-      background-color: var(--back-color-gray);
-      z-index: -1;
     }
+    width: 100%;
+    // height: auto;
+    background-color: var(--back-color-gray);
+    z-index: -1;
   }
 }
